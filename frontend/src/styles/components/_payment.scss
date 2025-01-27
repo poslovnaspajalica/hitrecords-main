@@ -1,0 +1,125 @@
+.payment-methods {
+  margin: 2rem 0;
+
+  .methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .method-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: var(--primary-color);
+    }
+
+    &.selected {
+      border-color: var(--primary-color);
+      background-color: var(--primary-color-light);
+    }
+
+    .method-icon {
+      width: 48px;
+      height: 48px;
+      margin-right: 1rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .method-info {
+      h4 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      p {
+        margin: 0.25rem 0 0;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+    }
+  }
+}
+
+.payment-form {
+  max-width: 400px;
+  margin: 2rem auto;
+
+  .form-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+
+      &:focus {
+        border-color: var(--primary-color);
+        outline: none;
+      }
+    }
+
+    .error {
+      color: var(--error-color);
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+.payment-instructions {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .instructions-content {
+    margin: 1.5rem 0;
+  }
+
+  .instruction-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    span {
+      color: var(--text-secondary);
+    }
+  }
+
+  .instructions-footer {
+    margin-top: 2rem;
+    text-align: center;
+
+    .note {
+      margin-bottom: 1.5rem;
+      color: var(--text-secondary);
+    }
+  }
+} 
